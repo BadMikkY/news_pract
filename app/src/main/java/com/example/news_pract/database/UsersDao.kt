@@ -12,5 +12,5 @@ interface UsersDao {
     fun insertNewUsersInfoData(user:UserDbEntity)
 
     @Query("SELECT is_logged FROM users ")
-    fun getIfUserLoggedInData(is_logged:UserDbEntity)
+    fun getIfUserLoggedInData(): Boolean
 }
