@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/typePINFragment">
+
+    <fragment
+        android:id="@+id/typePINFragment"
+        android:name="com.example.news_pract.fragments.type_pin.TypePINFragment"
+        android:label="fragment_type_p_i_n"
+        tools:layout="@layout/fragment_type_p_i_n" >
+        <action
+            android:id="@+id/action_typePINFragment_to_latestNewsFragment"
+            app:destination="@id/latestNewsFragment"
+            app:popUpTo="@id/typePINFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/latestNewsFragment"
+        android:name="com.example.news_pract.fragments.latest_news.LatestNewsFragment"
+        android:label="fragment_latest_news"
+        tools:layout="@layout/fragment_latest_news" />
+</navigation>
