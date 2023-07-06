@@ -9,7 +9,7 @@ import com.example.news_pract.database.entities.UserDbEntity
 @Dao
 interface UsersDao {
     @Insert(entity = UserDbEntity::class)
-    fun insertNewUsersInfoData(user:UserDbEntity)
+    fun insertNewUsersInfoData(user: UserDbEntity)
 
     @Query("SELECT is_logged FROM users ")
     fun getIfUserLoggedInData(): Boolean

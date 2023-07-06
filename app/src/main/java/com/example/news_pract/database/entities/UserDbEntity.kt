@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "users")
 data class UserDbEntity(
-    @PrimaryKey val is_logged: Boolean,
-    @ColumnInfo(name = "pin_code") val PinCode: Int
+    @PrimaryKey val id: Int,
+    @ColumnInfo(name = "is_logged") val isLogged: Boolean,
+    @ColumnInfo(name = "pin_code") val pinCode: Int
 )
