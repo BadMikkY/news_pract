@@ -1,4 +1,4 @@
-package com.example.news_pract.data
+package com.example.news_pract.data.remote
 
 import com.example.news_pract.util.Constants.Companion.API_KEY
 import retrofit2.Response
@@ -14,5 +14,5 @@ interface NewsAPI {
         pageNumber: Int = 1,
         @Query("apiKey")
         apikey: String = API_KEY
-    ): Response<ArticleX>
+    ): Response<ArticleApiModel>
 }

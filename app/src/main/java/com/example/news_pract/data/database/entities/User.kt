@@ -1,9 +1,9 @@
-package com.example.news_pract.database.entities
+package com.example.news_pract.data.database.entities
 
 data class User(
     val id: Int,
     val isLogged: Boolean,
-    val pinCode: Int
+    val pinCode: String
 ) {
     fun toUserDbEntity(): UserDbEntity = UserDbEntity(
         id = 1,
