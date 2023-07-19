@@ -1,10 +1,10 @@
-package com.example.news_pract.database
+package com.example.news_pract.data.database
 
 import android.content.Context
 import androidx.room.Room
 
 
-object  DataBaseHelper {
+object DataBaseHelper {
 
     private lateinit var applicationContext: Context
 
@@ -13,7 +13,7 @@ object  DataBaseHelper {
     }
 
     private val appDataBase: AppDataBase by lazy {
-        Room.databaseBuilder(applicationContext,AppDataBase::class.java,"database.db").build()
+        Room.databaseBuilder(applicationContext, AppDataBase::class.java, "database.db").build()
     }
 
 }

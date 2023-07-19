@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/typePINFragment"
-        android:name="com.example.news_pract.fragments.type_pin.TypePINFragment"
+        android:name="com.example.news_pract.presentation.fragments.type_pin.TypePINFragment"
         android:label="fragment_type_p_i_n"
         tools:layout="@layout/fragment_type_p_i_n" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/latestNewsFragment"
-        android:name="com.example.news_pract.fragments.latest_news.LatestNewsFragment"
+        android:name="com.example.news_pract.presentation.fragments.latest_news.LatestNewsFragment"
         android:label="fragment_latest_news"
         tools:layout="@layout/fragment_latest_news" />
 </navigation>
