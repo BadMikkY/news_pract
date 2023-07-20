@@ -3,12 +3,9 @@ package com.example.news_pract.presentation.fragments.latest_news
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.news_pract.data.remote.Article
-import com.example.news_pract.databinding.FragmentLatestNewsBinding
 import com.example.news_pract.databinding.ItemArticlePreviewBinding
 
 class NewsAdapter() :

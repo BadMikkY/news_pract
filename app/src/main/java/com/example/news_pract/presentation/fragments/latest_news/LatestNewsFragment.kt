@@ -9,12 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.news_pract.App
 import com.example.news_pract.R
-import com.example.news_pract.data.remote.ArticleApiModel
 import com.example.news_pract.databinding.FragmentLatestNewsBinding
-import com.example.news_pract.databinding.FragmentTypePINBinding
+import com.example.news_pract.presentation.fragments.more_info.ArticleFragment
+import com.example.news_pract.presentation.fragments.more_info.ArticleFragment.Companion.ARTICLE_KEY
 import kotlinx.coroutines.launch
 import com.example.news_pract.util.Result
 
@@ -39,6 +41,19 @@ class LatestNewsFragment : Fragment(R.layout.fragment_latest_news) {
         newsViewModel.getLatestNews("us")
 
         setupRecyclerView()
+
+
+        newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putParcelable(ARTICLE_KEY, it)
+            }
+            findNavController().navigate(R.id.action_latestNewsFragment_to_articleFragment, bundle)
+        }
+
+        binding.toSavedNewsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_latestNewsFragment_to_savedNewsFragment)
+        }
+
 
         viewLifecycleOwner.lifecycleScope.launch {
             newsViewModel.latestNews.collect { response ->

@@ -1,7 +1,7 @@
 package com.example.news_pract.presentation.fragments.type_pin
 
 
-import android.widget.Toast
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 
