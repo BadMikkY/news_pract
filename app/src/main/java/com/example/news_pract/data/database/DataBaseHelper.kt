@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 
 
-object DataBaseHelper {
+object  DataBaseHelper {
 
     private lateinit var applicationContext: Context
 

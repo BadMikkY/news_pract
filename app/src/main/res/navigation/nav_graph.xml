@@ -21,5 +21,24 @@
         android:id="@+id/latestNewsFragment"
         android:name="com.example.news_pract.presentation.fragments.latest_news.LatestNewsFragment"
         android:label="fragment_latest_news"
-        tools:layout="@layout/fragment_latest_news" />
+        tools:layout="@layout/fragment_latest_news" >
+        <action
+            android:id="@+id/action_latestNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_latestNewsFragment_to_savedNewsFragment"
+            app:destination="@id/savedNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.news_pract.presentation.fragments.more_info.ArticleFragment"
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.news_pract.data.remote.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.example.news_pract.presentation.fragments.saved_news.SavedNewsFragment"
+        android:label="SavedNewsFragment" />
 </navigation>
